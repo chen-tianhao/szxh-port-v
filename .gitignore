@@ -51,6 +51,9 @@ __pycache__/
 .venv/
 venv/
 
+# 影像瓦片下载缓存（可重新生成，不入库）
+assets/imagery/tiles/
+
 # 三维资产工作文件（导出的 glb/gltf 应入库；DCC 源文件不入库）
 *.blend1
 *.max

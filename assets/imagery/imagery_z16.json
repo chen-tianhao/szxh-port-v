@@ -1,0 +1,14 @@
+{
+ "z": 16,
+ "tiles": 8,
+ "tiles_ok": 64,
+ "width": 2048,
+ "height": 2048,
+ "lat_nw": 31.686107579079476,
+ "lon_nw": 121.1572265625,
+ "lat_se": 31.64870528997685,
+ "lon_se": 121.201171875,
+ "m_per_px": 2.0330186158564523,
+ "source": "Esri World Imagery (internal use / replace before publishing)",
+ "attribution": "© Esri, Maxar, Earthstar Geographics"
+}
