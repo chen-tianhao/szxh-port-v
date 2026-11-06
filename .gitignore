@@ -1,0 +1,59 @@
+# OS 生成文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+desktop.ini
+
+# 编辑器 / IDE
+.vscode/
+.idea/
+*.sublime-workspace
+*.swp
+*~
+
+# Node / 构建产物（本项目暂无构建步骤，预先占位）
+node_modules/
+dist/
+build/
+.cache/
+.parcel-cache/
+coverage/
+
+# 日志
+*.log
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# 本地环境与密钥（绝不入库）
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.*
+
+# 交付压缩包 / 临时文件
+*.zip
+*.7z
+*.tar.gz
+*.tgz
+tmp/
+*.tmp
+*.bak
+
+# Python（后续接数据处理脚本时用）
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 三维资产工作文件（导出的 glb/gltf 应入库；DCC 源文件不入库）
+*.blend1
+*.max
+*.c4d
+*.fbx~
+*.mb
