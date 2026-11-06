@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>太仓鑫海码头 · 3D 数字孪生 v0.1</title>
+<style>
+  :root{--bg:#080b10;--fg:#dfe8f2;--dim:#7d8b9c;--acc:#31d0aa;--warn:#ffb84d;--line:#1e2836}
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);
+    font:13px/1.5 -apple-system,"Segoe UI","Noto Sans SC",sans-serif;overflow:hidden}
+  #c{display:block;width:100%;height:100%}
+  #labels{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+  .panel{position:fixed;background:rgba(10,16,24,.82);border:1px solid var(--line);
+    border-radius:10px;padding:10px 12px;backdrop-filter:blur(8px);font-size:12px}
+  #title{top:12px;left:12px;max-width:330px}
+  #title b{color:var(--acc);font-size:14px;letter-spacing:.5px}
+  #title .s{color:var(--dim);font-size:11px;margin-top:2px}
+  #layers{top:12px;right:12px;min-width:150px}
+  #layers label{display:flex;align-items:center;gap:7px;padding:3px 0;cursor:pointer;color:var(--fg)}
+  #layers input{accent-color:var(--acc);cursor:pointer}
+  #stats{bottom:12px;left:12px;min-width:230px}
+  #stats .row{display:flex;justify-content:space-between;gap:14px;padding:2px 0}
+  #stats .k{color:var(--dim)}
+  #stats .v{color:var(--fg);font-variant-numeric:tabular-nums}
+  #stats .v.hot{color:var(--warn)}
+  #info{bottom:12px;right:12px;min-width:236px;display:none}
+  #info h4{margin:0 0 6px;color:var(--acc);font-size:12px;font-weight:600}
+  #hint{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);color:var(--dim);font-size:11px}
+  .lbl{color:#9fd8ff;font-size:11px;background:rgba(6,12,20,.72);border:1px solid #2b4a63;
+    border-radius:5px;padding:1px 5px;white-space:nowrap;transform:translateY(-6px)}
+  .lbl.y{color:#ffd08a;border-color:#5c4520}
+</style>
+<script>
+// 开发期错误口显：现场调试直接看屏，不用开控制台
+window.__errs = [];
+window.addEventListener('error', e => {
+  window.__errs.push((e.message || 'error') + ' @ ' + (e.filename || '') + ':' + (e.lineno || ''));
+  document.title = 'ERR: ' + window.__errs.join(' | ');
+  let d = document.getElementById('errbox');
+  if (!d) {
+    d = document.createElement('div');
+    d.id = 'errbox';
+    d.style.cssText = 'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);max-width:70%;z-index:9999;background:#3a1116;color:#ffd0d0;border:1px solid #7a2b33;border-radius:8px;padding:12px 16px;font:12px/1.6 monospace;white-space:pre-wrap';
+    document.body.appendChild(d);
+  }
+  d.textContent = 'JS 错误:\n' + window.__errs.join('\n');
+});
+</script>
+<script type="importmap">
+{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/addons/"}}
+</script>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="labels"></div>
+
+<div class="panel" id="title">
+  <b>太仓鑫海码头</b> · 3D 数字孪生 v0.1
+  <div class="s">苏州港太仓港区 · 长江岸线 2608 m · 海轮泊位 8 + 驳船泊位 8 · 20 万吨 CAPE 减载</div>
+  <div class="s" style="color:#4d5b6b">几何与数据为占位示意，替换 config 即可接真实数据</div>
+</div>
+
+<div class="panel" id="layers">
+  <label><input type="checkbox" data-layer="water" checked> 长江水域</label>
+  <label><input type="checkbox" data-layer="quay" checked> 岸线与泊位</label>
+  <label><input type="checkbox" data-layer="cranes" checked> 门机</label>
+  <label><input type="checkbox" data-layer="yard" checked> 堆场货物</label>
+  <label><input type="checkbox" data-layer="ships" checked> 船舶</label>
+  <label><input type="checkbox" data-layer="trucks" checked> 疏港车辆</label>
+  <label><input type="checkbox" data-layer="labels" checked> 泊位标牌</label>
+</div>
+
+<div class="panel" id="stats">
+  <div class="row"><span class="k">海轮泊位占用</span><span class="v" id="s-berth">–</span></div>
+  <div class="row"><span class="k">在港船舶</span><span class="v" id="s-ships">–</span></div>
+  <div class="row"><span class="k">堆场利用率</span><span class="v" id="s-yard">–</span></div>
+  <div class="row"><span class="k">今日进出库</span><span class="v" id="s-ton">–</span></div>
+  <div class="row"><span class="k">门机作业中</span><span class="v" id="s-crane">–</span></div>
+</div>
+
+<div class="panel" id="info"><h4></h4><div class="body"></div></div>
+<div id="hint">拖拽旋转 · 滚轮缩放 · 右键平移 · 点击泊位/堆场查看属性</div>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
+
+/* ============================================================
+   === 1. 配置层：把这里换成真实数据就是真孪生 ===
+   ============================================================ */
+const CFG = {
+  name: '太仓鑫海码头',
+  quayLength: 2608,             // 长江岸线 m
+  berths: 8,                    // 海轮泊位
+  bargeBerths: 8,               // 内档驳船泊位
+  capeDraftLimit: 20,           // 万吨
+  // 泊位表：真实项目从港口总规 / 靠泊能力表导入
+  berthPlan: [
+    { id: 'B1', len: 296, cargo: '矿石',   vessel: 'CAPE 减载', util: 0.92 },
+    { id: 'B2', len: 296, cargo: '煤炭',   vessel: 'CAPE 减载', util: 0.81 },
+    { id: 'B3', len: 296, cargo: '黄沙',   vessel: '巴拿马型',  util: 0.55 },
+    { id: 'B4', len: 296, cargo: '件杂货', vessel: 'handymax',  util: 0.88 },
+    { id: 'B5', len: 296, cargo: '粮食',   vessel: '巴拿马型',  util: 0.40 },
+    { id: 'B6', len: 296, cargo: '矿石',   vessel: 'CAPE 减载', util: 0.95 },
+    { id: 'B7', len: 296, cargo: '钢卷',   vessel: 'handymax',  util: 0.62 },
+    { id: 'B8', len: 296, cargo: '件杂货', vessel: 'handymax',  util: 0.30 },
+  ],
+};
+
+const CARGO_COLOR = {
+  '煤炭': 0x2b2b30, '矿石': 0x6d4b34, '黄沙': 0xc9b285,
+  '粮食': 0xb9a05a, '钢卷': 0x5b6b7d, '件杂货': 0x4a6b8a,
+};
+
+/* ============================================================
+   === 2. 渲染骨架 ===
+   ============================================================ */
+const canvas = document.getElementById('c');
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.setSize(innerWidth, innerHeight);
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.75;
+
+const labelRenderer = new CSS2DRenderer({ element: document.getElementById('labels') });
+labelRenderer.setSize(innerWidth, innerHeight);
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x070a0f);
+scene.fog = new THREE.Fog(0x0a1017, 4200, 11000);
+
+const camera = new THREE.PerspectiveCamera(45, innerWidth / innerHeight, 1, 20000);
+camera.position.set(-1180, 560, 1090);
+
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.target.set(0, 30, -270);
+controls.enableDamping = true;
+controls.dampingFactor = 0.06;
+controls.maxPolarAngle = Math.PI * 0.487;
+controls.minDistance = 150;
+controls.maxDistance = 6500;
+controls.update();
+
+// 光照：低角度斜射，压出码头设施的阴影层次
+const sun = new THREE.DirectionalLight(0xfff0d8, 3.4);
+sun.position.set(-1500, 1300, 1500);
+sun.castShadow = true;
+sun.shadow.mapSize.set(2048, 2048);
+const sc = sun.shadow.camera;
+sc.left = -2200; sc.right = 2200; sc.top = 1600; sc.bottom = -1600; sc.near = 100; sc.far = 5000;
+scene.add(sun);
+scene.add(new THREE.HemisphereLight(0x88b4d8, 0x141a22, 2.0));
+scene.add(new THREE.AmbientLight(0x5f7791, 0.7));
+scene.add(new THREE.DirectionalLight(0x2b6f9e, 0.5).translateX(1800));
+
+/* ============================================================
+   === 3. 图层组 ===
+   ============================================================ */
+const G = {
+  water: new THREE.Group(), quay: new THREE.Group(), cranes: new THREE.Group(),
+  yard: new THREE.Group(), ships: new THREE.Group(), trucks: new THREE.Group(),
+  labels: new THREE.Group(),
+};
+Object.values(G).forEach(g => scene.add(g));
+
+const L = CFG.quayLength, half = L / 2;
+
+/* ---- 长江水域 ---- */
+{
+  const geo = new THREE.PlaneGeometry(9000, 4200, 90, 42);
+  geo.rotateX(-Math.PI / 2);
+  const mat = new THREE.MeshStandardMaterial({
+    color: 0x245f80, roughness: 0.2, metalness: 0.6, transparent: true, opacity: 0.96,
+  });
+  const water = new THREE.Mesh(geo, mat);
+  water.position.set(0, -1.2, 2100);
+  water.receiveShadow = true;
+  water.userData.wave = true;
+  G.water.add(water);
+  // 航道中心线
+  const lane = new THREE.Mesh(
+    new THREE.PlaneGeometry(8600, 8),
+    new THREE.MeshBasicMaterial({ color: 0x2a7ea8, transparent: true, opacity: 0.35 })
+  );
+  lane.rotation.x = -Math.PI / 2; lane.position.set(0, 0.4, 620);
+  G.water.add(lane);
+}
+
+/* ---- 陆域底板 ---- */
+{
+  const land = new THREE.Mesh(
+    new THREE.PlaneGeometry(6400, 2800),
+    new THREE.MeshStandardMaterial({ color: 0x262e39, roughness: 0.9 })
+  );
+  land.rotation.x = -Math.PI / 2;
+  land.position.set(0, 0, -1400);
+  land.receiveShadow = true;
+  G.quay.add(land);
+
+  // 场内主干道（俯瞰图里用来读路网）
+  const roadMat = new THREE.MeshStandardMaterial({ color: 0x1a2029, roughness: 0.95 });
+  for (const rz of [-14, -172, -352, -562, -706]) {
+    const road = new THREE.Mesh(new THREE.PlaneGeometry(2600, 22), roadMat);
+    road.rotation.x = -Math.PI / 2;
+    road.position.set(0, 0.35, rz);
+    road.receiveShadow = true;
+    G.quay.add(road);
+  }
+}
+
+/* ---- 码头岸壁 + 泊位 ---- */
+const berthIndex = [];       // 供拾取
+const QUAY_EDGE_Z = 0;
+{
+  const wall = new THREE.Mesh(
+    new THREE.BoxGeometry(L, 9, 12),
+    new THREE.MeshStandardMaterial({ color: 0x39424f, roughness: 0.85 })
+  );
+  wall.position.set(0, 3.5, -6);
+  wall.castShadow = wall.receiveShadow = true;
+  G.quay.add(wall);
+
+  const pitch = L / CFG.berths;
+  CFG.berthPlan.forEach((b, i) => {
+    const cx = -half + pitch * i + pitch / 2;
+    const g = new THREE.Group();
+    g.position.set(cx, 0, QUAY_EDGE_Z);
+
+    // 泊位地面标识
+    const pad = new THREE.Mesh(
+      new THREE.PlaneGeometry(b.len, 26),
+      new THREE.MeshStandardMaterial({
+        color: COL(b.util), roughness: 0.7, transparent: true, opacity: 0.5,
+      })
+    );
+    pad.rotation.x = -Math.PI / 2;
+    pad.position.set(0, 0.72, -13);
+    g.add(pad);
+
+    // 系缆桩
+    for (let k = -2; k <= 2; k++) {
+      const bollard = new THREE.Mesh(
+        new THREE.CylinderGeometry(1.1, 1.3, 2.6, 8),
+        new THREE.MeshStandardMaterial({ color: 0x8d97a3, roughness: 0.6, metalness: 0.5 })
+      );
+      bollard.position.set(k * (b.len / 5.4), 1.6, -2.5);
+      bollard.castShadow = true;
+      g.add(bollard);
+    }
+
+    // 标牌
+    const el = document.createElement('div');
+    el.className = 'lbl';
+    el.textContent = `${b.id} · ${b.cargo} · ${(b.util * 100).toFixed(0)}%`;
+    const lab = new CSS2DObject(el);
+    lab.position.set(0, 16, -14);
+    G.labels.add(lab);
+    lab.position.x += cx;
+
+    g.userData = { type: 'berth', ...b };
+    berthIndex.push(g);
+    G.quay.add(g);
+  });
+}
+
+function COL(u) {
+  // 利用率 0..1 → 绿→黄→红
+  const c = new THREE.Color();
+  if (u < 0.6) c.setHSL(0.42, 0.55, 0.22 + u * 0.12);
+  else if (u < 0.85) c.setHSL(0.11, 0.7, 0.32);
+  else c.setHSL(0.02, 0.75, 0.34);
+  return c;
+}
+
+/* ---- 内港池（驳船作业区） ---- */
+{
+  const basin = new THREE.Mesh(
+    new THREE.PlaneGeometry(L - 200, 180),
+    new THREE.MeshStandardMaterial({ color: 0x1d5878, roughness: 0.25, metalness: 0.6 })
+  );
+  basin.rotation.x = -Math.PI / 2;
+  basin.position.set(0, 0.5, -240);
+  G.water.add(basin);
+
+  for (let i = 0; i < CFG.bargeBerths; i++) {
+    const x = -half + (L / CFG.bargeBerths) * i + L / CFG.bargeBerths / 2;
+    const pad = new THREE.Mesh(
+      new THREE.PlaneGeometry(150, 16),
+      new THREE.MeshStandardMaterial({ color: 0x1d3a4a, roughness: 0.8 })
+    );
+    pad.rotation.x = -Math.PI / 2;
+    pad.position.set(x, 0.75, -325);
+    G.quay.add(pad);
+
+    const m = new THREE.Mesh(
+      new THREE.BoxGeometry(150, 22, 12),
+      new THREE.MeshStandardMaterial({ color: 0x2f3946, roughness: 0.9 })
+    );
+    m.position.set(x, 0.6, -334); g2Add(m);
+  }
+  function g2Add(o) { o.receiveShadow = true; G.quay.add(o); }
+}
+
+/* ---- 门机：参数化，随时可换真实 CAD ---- */
+const craneAnims = [];
+{
+  const pitch = L / CFG.berths;
+  CFG.berthPlan.forEach((b, i) => {
+    for (const off of [-90, 90]) {
+      const cx = -half + pitch * i + pitch / 2 + off;
+      const crane = makePortalCrane();
+      crane.position.set(cx, 0, -18);
+      Object.assign(crane.userData, { type: 'crane', berth: b.id });
+      G.cranes.add(crane);
+      craneAnims.push({ obj: crane, phase: Math.random() * 6.28, base: cx });
+    }
+  });
+}
+
+function makePortalCrane() {
+  const g = new THREE.Group();
+  const steel = new THREE.MeshStandardMaterial({ color: 0x24506e, roughness: 0.55, metalness: 0.45 });
+  const accent = new THREE.MeshStandardMaterial({ color: 0xd9a531, roughness: 0.5, metalness: 0.3 });
+  const legH = 34, gauge = 22, base = 16;
+
+  for (const sx of [-1, 1]) for (const sz of [-1, 1]) {
+    const leg = new THREE.Mesh(new THREE.CylinderGeometry(1.5, 1.9, legH, 10), steel);
+    leg.position.set(sx * base, legH / 2, sz * gauge / 2);
+    leg.castShadow = true; g.add(leg);
+  }
+  // 门架横梁
+  for (const sz of [-1, 1]) {
+    const beam = new THREE.Mesh(new THREE.BoxGeometry(base * 2 + 4, 2.4, 2.4), steel);
+    beam.position.set(0, legH - 1.2, sz * gauge / 2);
+    beam.castShadow = true; g.add(beam);
+  }
+  // 机房
+  const house = new THREE.Mesh(new THREE.BoxGeometry(16, 7, 14), steel);
+  house.position.set(0, legH + 3.5, 0); house.castShadow = true; g.add(house);
+  // 臂架（伸向水域 +Z）
+  const boom = new THREE.Mesh(new THREE.BoxGeometry(3.2, 2.6, 62), steel);
+  boom.position.set(0, legH + 8, 22); boom.castShadow = true; g.add(boom);
+  const boomTip = new THREE.Mesh(new THREE.BoxGeometry(3.6, 3.4, 3.6), accent);
+  boomTip.position.set(0, legH + 8, 52); g.add(boomTip);
+  // 抓斗 / 吊具
+  const grab = new THREE.Mesh(new THREE.BoxGeometry(5, 5, 5), accent);
+  grab.position.set(0, legH - 4, 40); grab.castShadow = true; g.add(grab);
+  g.userData.grab = grab;
+  g.userData.boomTip = boomTip;
+  return g;
+}
+
+/* ---- 堆场：InstancedMesh 一次画完，几十万㎡ 也只一个 draw call ---- */
+const yardStats = [];
+{
+  const yards = [
+    { id: 'YA', z0: -150, z1: -22,  cargo: '件杂货', cx: 0,      w: L - 60 },
+    { id: 'YB', z0: -560, z1: -332, cargo: '煤炭',   cx: 0,      w: L - 60 },
+    { id: 'YC', z0: -700, z1: -562, cargo: '黄沙',   cx: 0,      w: 1100 },
+    { id: 'YD', z0: -700, z1: -562, cargo: '粮食',   cx: 1400,   w: 900 },
+  ];
+  let seed = 20260823;
+  const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+
+  for (const y of yards) {
+    const bayW = 42, rowD = 46;
+    const nb = Math.floor(y.w / bayW), nr = Math.max(1, Math.floor((y.z0 - y.z1) / rowD));
+    const total = nb * nr;
+    if (total <= 0) continue;
+    const geo = new THREE.BoxGeometry(1, 1, 1);
+    const mat = new THREE.MeshStandardMaterial({ roughness: 0.9, metalness: 0.05 });
+    const im = new THREE.InstancedMesh(geo, mat, total);
+    im.castShadow = im.receiveShadow = true;
+    const base = new THREE.Color(CARGO_COLOR[y.cargo] || 0x445566);
+    const m4 = new THREE.Matrix4(), q = new THREE.Quaternion(),
+          pos = new THREE.Vector3(), scl = new THREE.Vector3(), col = new THREE.Color();
+    let n = 0, fill = 0;
+    for (let i = 0; i < nb; i++) for (let j = 0; j < nr; j++) {
+      const occupied = rnd() > 0.28;
+      const h = occupied ? 4 + rnd() * 13 : 0.4;
+      const x = y.cx - y.w / 2 + bayW * i + bayW / 2;
+      const z = y.z0 - rowD * j - rowD / 2;
+      pos.set(x, h / 2, z);
+      scl.set(bayW - 10, h, rowD - 12);
+      m4.compose(pos, q, scl);
+      im.setMatrixAt(n, m4);
+      col.copy(base).multiplyScalar(0.75 + rnd() * 0.5);
+      im.setColorAt(n, col);
+      if (occupied) fill++;
+      n++;
+    }
+    im.instanceMatrix.needsUpdate = true;
+    if (im.instanceColor) im.instanceColor.needsUpdate = true;
+    im.userData = { type: 'yard', id: y.id, cargo: y.cargo,
+      area: Math.round(y.w * (y.z0 - y.z1)), fill: fill / total };
+    G.yard.add(im);
+    yardStats.push({ id: y.id, cargo: y.cargo, util: fill / total });
+
+    const el = document.createElement('div');
+    el.className = 'lbl y';
+    el.textContent = `${y.id} ${y.cargo} ${(fill / total * 100).toFixed(0)}%`;
+    const lab = new CSS2DObject(el);
+    lab.position.set(y.cx, 26, (y.z0 + y.z1) / 2);
+    G.labels.add(lab);
+  }
+}
+
+/* ---- 船舶 ---- */
+const ships = [];
+function makeBulkShip(len, beam, hullColor) {
+  const g = new THREE.Group();
+  const hullShape = new THREE.Shape();
+  hullShape.moveTo(-len / 2, -beam / 2);
+  hullShape.lineTo(len / 2 - 22, -beam / 2);
+  hullShape.quadraticCurveTo(len / 2, 0, len / 2 - 22, beam / 2);
+  hullShape.lineTo(-len / 2, beam / 2);
+  hullShape.lineTo(-len / 2, -beam / 2);
+  const hullGeo = new THREE.ExtrudeGeometry(hullShape, { depth: 9, bevelEnabled: false });
+  hullGeo.rotateX(-Math.PI / 2);
+  const hull = new THREE.Mesh(hullGeo, new THREE.MeshStandardMaterial({
+    color: hullColor, roughness: 0.65, metalness: 0.3,
+  }));
+  hull.position.y = -1; hull.castShadow = hull.receiveShadow = true;
+  g.add(hull);
+
+  // 舱口盖
+  const hatchCount = 5;
+  for (let i = 0; i < hatchCount; i++) {
+    const h = new THREE.Mesh(
+      new THREE.BoxGeometry(len / hatchCount - 10, 2.2, beam - 8),
+      new THREE.MeshStandardMaterial({ color: 0x3c4a58, roughness: 0.8 })
+    );
+    h.position.set(-len / 2 + (len / hatchCount) * (i + 0.5), 8.5, 0);
+    h.castShadow = true; g.add(h);
+  }
+  // 艉楼
+  const house = new THREE.Mesh(
+    new THREE.BoxGeometry(26, 16, beam - 6),
+    new THREE.MeshStandardMaterial({ color: 0xdde3ea, roughness: 0.7 })
+  );
+  house.position.set(-len / 2 + 18, 16, 0); house.castShadow = true; g.add(house);
+  const funnel = new THREE.Mesh(
+    new THREE.CylinderGeometry(3, 3.4, 12, 10),
+    new THREE.MeshStandardMaterial({ color: 0x8a3b32, roughness: 0.7 })
+  );
+  funnel.position.set(-len / 2 + 18, 30, 0); g.add(funnel);
+  return g;
+}
+
+// 靠泊中的 3 条海轮（按泊位计划占位）
+{
+  const moored = [
+    { berth: 'B1', len: 292, beam: 45, color: 0xb03a33 },
+    { berth: 'B4', len: 225, beam: 32, color: 0x2a6f96 },
+    { berth: 'B6', len: 292, beam: 45, color: 0x3f6b47 },
+  ];
+  const pitch = L / CFG.berths;
+  moored.forEach(m => {
+    const i = CFG.berthPlan.findIndex(b => b.id === m.berth);
+    const cx = -half + pitch * i + pitch / 2;
+    const ship = makeBulkShip(m.len, m.beam, m.color);
+    ship.position.set(cx + 30, 0, m.beam / 2 + 6);
+    ship.rotation.y = Math.PI;               // 船首朝 -X
+    ship.userData = { type: 'ship', name: `${m.berth} 在泊海轮`, bob: Math.random() * 6.28 };
+    G.ships.add(ship); ships.push(ship);
+  });
+}
+
+// 航道里在航的船 + 内港池驳船
+const transits = [];
+{
+  const t = makeBulkShip(200, 30, 0x3a4f63);
+  t.position.set(-2200, 0, 560);
+  t.userData = { type: 'ship', name: '航道过境船' };
+  G.ships.add(t); transits.push({ obj: t, z: 560, speed: 90, dir: 1, range: 2600 });
+
+  const t2 = makeBulkShip(180, 28, 0x4a3f2f);
+  t2.position.set(2400, 0, 780);
+  t2.userData = { type: 'ship', name: '航道过境船' };
+  G.ships.add(t2); transits.push({ obj: t2, z: 780, speed: 70, dir: -1, range: 2600 });
+
+  for (let i = 0; i < 3; i++) {
+    const barge = makeBulkShip(120, 20, 0x505b48);
+    const x = -900 + i * 900;
+    barge.position.set(x, 0, -240);
+    barge.scale.setScalar(0.8);
+    barge.userData = { type: 'ship', name: `驳船 ${i + 1}` };
+    G.ships.add(barge);
+    transits.push({ obj: barge, z: -240, speed: 26, dir: i % 2 ? -1 : 1, range: 1100, basin: true });
+  }
+}
+
+/* ---- 疏港车辆 ---- */
+const truckAnims = [];
+{
+  const geo = new THREE.BoxGeometry(12, 4, 4.2);
+  const mat = new THREE.MeshStandardMaterial({ color: 0x9aa4b0, roughness: 0.7 });
+  const im = new THREE.InstancedMesh(geo, mat, 70);
+  im.castShadow = true;
+  G.trucks.add(im);
+  const m4 = new THREE.Matrix4(), q = new THREE.Quaternion(),
+        pos = new THREE.Vector3(), scl = new THREE.Vector3(1, 1, 1);
+  for (let i = 0; i < 70; i++) {
+    truckAnims.push({
+      lane: i % 3, x: -half + Math.random() * L, speed: 18 + Math.random() * 14,
+      dir: i % 2 ? 1 : -1,
+    });
+  }
+  im.userData.update = (t) => {
+    truckAnims.forEach((tr, i) => {
+      tr.x += tr.speed * tr.dir * t;
+      if (tr.x > half) tr.x = -half;
+      if (tr.x < -half) tr.x = half;
+      const z = [-14, -172, -352][tr.lane];
+      pos.set(tr.x, 2.2, z);
+      m4.compose(pos, q, scl);
+      im.setMatrixAt(i, m4);
+    });
+    im.instanceMatrix.needsUpdate = true;
+  };
+}
+
+/* ============================================================
+   === 4. 交互：图层、拾取、HUD ===
+   ============================================================ */
+const raycaster = new THREE.Raycaster();
+const pointer = new THREE.Vector2();
+const infoBox = document.getElementById('info');
+
+renderer.domElement.addEventListener('pointerdown', (e) => {
+  pointer.x = (e.clientX / innerWidth) * 2 - 1;
+  pointer.y = -(e.clientY / innerHeight) * 2 + 1;
+  raycaster.setFromCamera(pointer, camera);
+  const hits = raycaster.intersectObjects([...G.quay.children, ...G.yard.children, ...G.ships.children], true);
+  if (!hits.length) { infoBox.style.display = 'none'; return; }
+  let o = hits[0].object;
+  while (o && !o.userData?.type) o = o.parent;
+  if (!o) { infoBox.style.display = 'none'; return; }
+  const u = o.userData;
+  let html = '';
+  if (u.type === 'berth') {
+    html = `<div class="row"><span class="k">泊位</span><span class="v">${u.id}</span></div>
+      <div class="row"><span class="k">泊位长度</span><span class="v">${u.len} m</span></div>
+      <div class="row"><span class="k">主要货种</span><span class="v">${u.cargo}</span></div>
+      <div class="row"><span class="k">设计靠泊</span><span class="v">${u.vessel}</span></div>
+      <div class="row"><span class="k">占用率</span><span class="v">${(u.util * 100).toFixed(0)}%</span></div>`;
+  } else if (u.type === 'yard') {
+    html = `<div class="row"><span class="k">堆场</span><span class="v">${u.id}</span></div>
+      <div class="row"><span class="k">货种</span><span class="v">${u.cargo}</span></div>
+      <div class="row"><span class="k">面积</span><span class="v">${(u.area / 10000).toFixed(1)} 万㎡</span></div>
+      <div class="row"><span class="k">利用率</span><span class="v">${(u.fill * 100).toFixed(0)}%</span></div>`;
+  } else if (u.type === 'crane') {
+    html = `<div class="row"><span class="k">设备</span><span class="v">门机</span></div>
+      <div class="row"><span class="k">所属泊位</span><span class="v">${u.berth}</span></div>`;
+  } else if (u.type === 'ship') {
+    html = `<div class="row"><span class="k">对象</span><span class="v">${u.name}</span></div>`;
+  }
+  infoBox.querySelector('h4').textContent = '属性';
+  infoBox.querySelector('.body').innerHTML = html;
+  infoBox.style.display = 'block';
+});
+
+document.querySelectorAll('#layers input').forEach(cb => {
+  cb.addEventListener('change', () => {
+    const g = G[cb.dataset.layer];
+    if (g) g.visible = cb.checked;
+  });
+});
+
+// HUD 数据（真实项目替换为接口返回）
+function refreshHUD() {
+  const occ = CFG.berthPlan.filter(b => b.util > 0.5).length;
+  document.getElementById('s-berth').textContent = `${occ} / ${CFG.berths}`;
+  document.getElementById('s-ships').textContent = `${ships.length + 2 + 3} 艘`;
+  const avg = yardStats.reduce((s, y) => s + y.util, 0) / yardStats.length;
+  document.getElementById('s-yard').textContent = `${(avg * 100).toFixed(0)}%`;
+  document.getElementById('s-ton').textContent = `${(8.4 + Math.random() * 2.6).toFixed(1)} 万吨`;
+  document.getElementById('s-crane').textContent = `${12 + Math.floor(Math.random() * 6)} / 16 台`;
+}
+refreshHUD();
+setInterval(refreshHUD, 4000);
+
+/* ============================================================
+   === 5. 主循环 ===
+   ============================================================ */
+const clock = new THREE.Clock();
+const waterMesh = G.water.children[0];
+const wPos = waterMesh.geometry.attributes.position;
+
+function animate() {
+  const dt = Math.min(clock.getDelta(), 0.05);
+  const t = clock.elapsedTime;
+
+  // 水面轻微起伏
+  for (let i = 0; i < wPos.count; i++) {
+    const x = wPos.getX(i), z = wPos.getZ(i);
+    wPos.setY(i, Math.sin(x * 0.004 + t * 0.7) * 0.9 + Math.cos(z * 0.006 + t * 0.5) * 0.7);
+  }
+  wPos.needsUpdate = true;
+
+  // 门机小幅摆动 + 抓斗升降
+  craneAnims.forEach((c, i) => {
+    c.obj.position.x = c.base + Math.sin(t * 0.25 + c.phase) * 2.5;
+    const grab = c.obj.userData.grab;
+    const tip = c.obj.userData.boomTip;
+    const k = (Math.sin(t * 0.6 + c.phase) + 1) / 2;
+    grab.position.y = 12 + k * 22;
+    grab.position.z = 40 - k * 26;
+  });
+
+  // 靠泊船起伏
+  ships.forEach(s => {
+    s.position.y = Math.sin(t * 0.8 + s.userData.bob) * 0.35;
+    s.rotation.z = Math.sin(t * 0.5 + s.userData.bob) * 0.004;
+  });
+
+  // 在航船推进
+  transits.forEach(tr => {
+    tr.obj.position.x += tr.speed * tr.dir * dt;
+    if (tr.obj.position.x > half + 1500) tr.obj.position.x = -half - 1500;
+    if (tr.obj.position.x < -half - 1500) tr.obj.position.x = half + 1500;
+    tr.obj.position.y = Math.sin(t * 0.9 + tr.z) * 0.3;
+  });
+
+  G.trucks.children[0].userData.update(dt);
+  controls.update();
+  renderer.render(scene, camera);
+  labelRenderer.render(scene, camera);
+  requestAnimationFrame(animate);
+}
+animate();
+
+addEventListener('resize', () => {
+  camera.aspect = innerWidth / innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(innerWidth, innerHeight);
+  labelRenderer.setSize(innerWidth, innerHeight);
+});
+
+// 视角预设：数字键 1-3
+addEventListener('keydown', (e) => {
+  const views = {
+    '1': [[-1180, 560, 1090], [0, 30, -270]],  // 全景
+    '2': [[-1150, 150, 330], [-500, 20, -20]], // 泊位平视
+    '3': [[60, 1900, 900], [0, 0, -340]],      // 俯视总图（斜）
+    '4': [[0, 1850, -330], [0, 0, -329.6]],    // 正上方俯瞰（近似正射）
+  };
+  const v = views[e.key];
+  if (!v) return;
+  camera.position.set(...v[0]);
+  controls.target.set(...v[1]);
+  controls.update();
+});
+
+// 调试钩子：脚本化截图/自动化测试用
+window.__twin = { scene, camera, controls, renderer, groups: G, cfg: CFG };
+window.__TWIN_READY__ = true;
+</script>
+</body>
+</html>
