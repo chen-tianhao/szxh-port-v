@@ -1,0 +1,2708 @@
+{
+ "port1253": [
+  {
+   "date": "2026-10-30",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 23,
+   "portcalls_container": 4,
+   "portcalls_dry_bulk": 13,
+   "portcalls_tanker": 2,
+   "import": 599391,
+   "export": 11644
+  },
+  {
+   "date": "2026-10-29",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 29,
+   "portcalls_container": 7,
+   "portcalls_dry_bulk": 10,
+   "portcalls_tanker": 4,
+   "import": 415481,
+   "export": 18535
+  },
+  {
+   "date": "2026-10-28",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 32,
+   "portcalls_container": 5,
+   "portcalls_dry_bulk": 10,
+   "portcalls_tanker": 7,
+   "import": 241068,
+   "export": 82532
+  },
+  {
+   "date": "2026-10-27",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 42,
+   "portcalls_container": 8,
+   "portcalls_dry_bulk": 12,
+   "portcalls_tanker": 6,
+   "import": 536427,
+   "export": 44463
+  },
+  {
+   "date": "2026-10-26",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 13,
+   "portcalls_container": 6,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 2,
+   "import": 35780,
+   "export": 15607
+  },
+  {
+   "date": "2026-10-25",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 1,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 1583,
+   "export": 1056
+  },
+  {
+   "date": "2026-10-24",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 0,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 0
+  },
+  {
+   "date": "2026-10-23",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 8,
+   "portcalls_container": 3,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 0,
+   "import": 6939,
+   "export": 54032
+  },
+  {
+   "date": "2026-10-22",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 8,
+   "portcalls_container": 2,
+   "portcalls_dry_bulk": 4,
+   "portcalls_tanker": 0,
+   "import": 149003,
+   "export": 5784
+  },
+  {
+   "date": "2026-10-21",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 18,
+   "portcalls_container": 3,
+   "portcalls_dry_bulk": 11,
+   "portcalls_tanker": 1,
+   "import": 478926,
+   "export": 17655
+  },
+  {
+   "date": "2026-10-20",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 25,
+   "portcalls_container": 7,
+   "portcalls_dry_bulk": 11,
+   "portcalls_tanker": 1,
+   "import": 446103,
+   "export": 18548
+  },
+  {
+   "date": "2026-10-19",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 29,
+   "portcalls_container": 4,
+   "portcalls_dry_bulk": 8,
+   "portcalls_tanker": 10,
+   "import": 382897,
+   "export": 17798
+  },
+  {
+   "date": "2026-10-18",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 21,
+   "portcalls_container": 6,
+   "portcalls_dry_bulk": 5,
+   "portcalls_tanker": 3,
+   "import": 240622,
+   "export": 32590
+  },
+  {
+   "date": "2026-10-17",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 21,
+   "portcalls_container": 2,
+   "portcalls_dry_bulk": 11,
+   "portcalls_tanker": 4,
+   "import": 482948,
+   "export": 14662
+  },
+  {
+   "date": "2026-10-16",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 16,
+   "portcalls_container": 4,
+   "portcalls_dry_bulk": 6,
+   "portcalls_tanker": 2,
+   "import": 397862,
+   "export": 15104
+  },
+  {
+   "date": "2026-10-15",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 29,
+   "portcalls_container": 4,
+   "portcalls_dry_bulk": 9,
+   "portcalls_tanker": 6,
+   "import": 296905,
+   "export": 28330
+  },
+  {
+   "date": "2026-10-14",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 26,
+   "portcalls_container": 5,
+   "portcalls_dry_bulk": 6,
+   "portcalls_tanker": 6,
+   "import": 236119,
+   "export": 18068
+  },
+  {
+   "date": "2026-10-13",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 27,
+   "portcalls_container": 5,
+   "portcalls_dry_bulk": 9,
+   "portcalls_tanker": 5,
+   "import": 390598,
+   "export": 34263
+  },
+  {
+   "date": "2026-10-12",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 20,
+   "portcalls_container": 2,
+   "portcalls_dry_bulk": 7,
+   "portcalls_tanker": 3,
+   "import": 275108,
+   "export": 19623
+  },
+  {
+   "date": "2026-10-11",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 15,
+   "portcalls_container": 5,
+   "portcalls_dry_bulk": 3,
+   "portcalls_tanker": 0,
+   "import": 170875,
+   "export": 26952
+  },
+  {
+   "date": "2026-10-10",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 26,
+   "portcalls_container": 5,
+   "portcalls_dry_bulk": 6,
+   "portcalls_tanker": 7,
+   "import": 383461,
+   "export": 36674
+  },
+  {
+   "date": "2026-10-09",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 24,
+   "portcalls_container": 5,
+   "portcalls_dry_bulk": 9,
+   "portcalls_tanker": 4,
+   "import": 286543,
+   "export": 31377
+  },
+  {
+   "date": "2026-10-08",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 21,
+   "portcalls_container": 4,
+   "portcalls_dry_bulk": 7,
+   "portcalls_tanker": 6,
+   "import": 424400,
+   "export": 11556
+  },
+  {
+   "date": "2026-10-07",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 15,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 8,
+   "portcalls_tanker": 1,
+   "import": 277909,
+   "export": 22121
+  },
+  {
+   "date": "2026-10-06",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 26,
+   "portcalls_container": 4,
+   "portcalls_dry_bulk": 11,
+   "portcalls_tanker": 3,
+   "import": 500035,
+   "export": 14820
+  },
+  {
+   "date": "2026-10-05",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 15,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 9,
+   "portcalls_tanker": 2,
+   "import": 300682,
+   "export": 38957
+  },
+  {
+   "date": "2026-10-04",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 17,
+   "portcalls_container": 6,
+   "portcalls_dry_bulk": 3,
+   "portcalls_tanker": 1,
+   "import": 150222,
+   "export": 54602
+  },
+  {
+   "date": "2026-10-03",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 18,
+   "portcalls_container": 2,
+   "portcalls_dry_bulk": 9,
+   "portcalls_tanker": 2,
+   "import": 471576,
+   "export": 14564
+  },
+  {
+   "date": "2026-10-02",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 28,
+   "portcalls_container": 9,
+   "portcalls_dry_bulk": 9,
+   "portcalls_tanker": 4,
+   "import": 428057,
+   "export": 40781
+  },
+  {
+   "date": "2026-10-01",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 19,
+   "portcalls_container": 5,
+   "portcalls_dry_bulk": 5,
+   "portcalls_tanker": 5,
+   "import": 235974,
+   "export": 14401
+  },
+  {
+   "date": "2026-09-30",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 21,
+   "portcalls_container": 6,
+   "portcalls_dry_bulk": 5,
+   "portcalls_tanker": 4,
+   "import": 178336,
+   "export": 33056
+  },
+  {
+   "date": "2026-09-29",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 21,
+   "portcalls_container": 2,
+   "portcalls_dry_bulk": 6,
+   "portcalls_tanker": 5,
+   "import": 109900,
+   "export": 20623
+  },
+  {
+   "date": "2026-09-28",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 22,
+   "portcalls_container": 5,
+   "portcalls_dry_bulk": 7,
+   "portcalls_tanker": 3,
+   "import": 273097,
+   "export": 24626
+  },
+  {
+   "date": "2026-09-27",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 17,
+   "portcalls_container": 3,
+   "portcalls_dry_bulk": 7,
+   "portcalls_tanker": 4,
+   "import": 354556,
+   "export": 23059
+  },
+  {
+   "date": "2026-09-26",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 8,
+   "portcalls_container": 4,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 2,
+   "import": 118448,
+   "export": 7511
+  },
+  {
+   "date": "2026-09-25",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 20,
+   "portcalls_container": 6,
+   "portcalls_dry_bulk": 3,
+   "portcalls_tanker": 4,
+   "import": 132765,
+   "export": 35609
+  },
+  {
+   "date": "2026-09-24",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 23,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 7,
+   "portcalls_tanker": 6,
+   "import": 270679,
+   "export": 15960
+  },
+  {
+   "date": "2026-09-23",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 19,
+   "portcalls_container": 3,
+   "portcalls_dry_bulk": 3,
+   "portcalls_tanker": 6,
+   "import": 256234,
+   "export": 31671
+  },
+  {
+   "date": "2026-09-22",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 23,
+   "portcalls_container": 3,
+   "portcalls_dry_bulk": 7,
+   "portcalls_tanker": 7,
+   "import": 316387,
+   "export": 93828
+  },
+  {
+   "date": "2026-09-21",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 23,
+   "portcalls_container": 5,
+   "portcalls_dry_bulk": 7,
+   "portcalls_tanker": 3,
+   "import": 181960,
+   "export": 66377
+  },
+  {
+   "date": "2026-09-20",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 22,
+   "portcalls_container": 4,
+   "portcalls_dry_bulk": 5,
+   "portcalls_tanker": 1,
+   "import": 318375,
+   "export": 27143
+  },
+  {
+   "date": "2026-09-19",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 29,
+   "portcalls_container": 7,
+   "portcalls_dry_bulk": 11,
+   "portcalls_tanker": 6,
+   "import": 276592,
+   "export": 26612
+  },
+  {
+   "date": "2026-09-18",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 15,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 3,
+   "portcalls_tanker": 5,
+   "import": 67316,
+   "export": 3035
+  },
+  {
+   "date": "2026-09-17",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 21,
+   "portcalls_container": 2,
+   "portcalls_dry_bulk": 5,
+   "portcalls_tanker": 7,
+   "import": 275312,
+   "export": 32629
+  },
+  {
+   "date": "2026-09-16",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 23,
+   "portcalls_container": 3,
+   "portcalls_dry_bulk": 6,
+   "portcalls_tanker": 7,
+   "import": 362212,
+   "export": 30456
+  },
+  {
+   "date": "2026-09-15",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 27,
+   "portcalls_container": 6,
+   "portcalls_dry_bulk": 7,
+   "portcalls_tanker": 4,
+   "import": 374159,
+   "export": 9964
+  },
+  {
+   "date": "2026-09-14",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 21,
+   "portcalls_container": 4,
+   "portcalls_dry_bulk": 8,
+   "portcalls_tanker": 5,
+   "import": 416734,
+   "export": 73433
+  },
+  {
+   "date": "2026-09-13",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 19,
+   "portcalls_container": 5,
+   "portcalls_dry_bulk": 4,
+   "portcalls_tanker": 2,
+   "import": 286629,
+   "export": 17105
+  },
+  {
+   "date": "2026-09-12",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 29,
+   "portcalls_container": 6,
+   "portcalls_dry_bulk": 9,
+   "portcalls_tanker": 2,
+   "import": 319753,
+   "export": 35238
+  },
+  {
+   "date": "2026-09-11",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 27,
+   "portcalls_container": 2,
+   "portcalls_dry_bulk": 10,
+   "portcalls_tanker": 5,
+   "import": 471093,
+   "export": 36317
+  },
+  {
+   "date": "2026-09-10",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 23,
+   "portcalls_container": 2,
+   "portcalls_dry_bulk": 15,
+   "portcalls_tanker": 4,
+   "import": 644802,
+   "export": 13030
+  },
+  {
+   "date": "2026-09-09",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 23,
+   "portcalls_container": 6,
+   "portcalls_dry_bulk": 3,
+   "portcalls_tanker": 3,
+   "import": 74191,
+   "export": 39882
+  },
+  {
+   "date": "2026-09-08",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 31,
+   "portcalls_container": 2,
+   "portcalls_dry_bulk": 13,
+   "portcalls_tanker": 5,
+   "import": 543250,
+   "export": 30052
+  },
+  {
+   "date": "2026-09-07",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 33,
+   "portcalls_container": 8,
+   "portcalls_dry_bulk": 11,
+   "portcalls_tanker": 8,
+   "import": 415991,
+   "export": 48191
+  },
+  {
+   "date": "2026-09-06",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 18,
+   "portcalls_container": 5,
+   "portcalls_dry_bulk": 6,
+   "portcalls_tanker": 0,
+   "import": 55069,
+   "export": 81101
+  },
+  {
+   "date": "2026-09-05",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 14,
+   "portcalls_container": 2,
+   "portcalls_dry_bulk": 4,
+   "portcalls_tanker": 3,
+   "import": 70007,
+   "export": 19897
+  },
+  {
+   "date": "2026-09-04",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 19,
+   "portcalls_container": 4,
+   "portcalls_dry_bulk": 5,
+   "portcalls_tanker": 2,
+   "import": 159161,
+   "export": 23839
+  },
+  {
+   "date": "2026-09-03",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 21,
+   "portcalls_container": 5,
+   "portcalls_dry_bulk": 6,
+   "portcalls_tanker": 4,
+   "import": 150873,
+   "export": 27409
+  },
+  {
+   "date": "2026-09-02",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 27,
+   "portcalls_container": 8,
+   "portcalls_dry_bulk": 8,
+   "portcalls_tanker": 2,
+   "import": 310099,
+   "export": 59044
+  },
+  {
+   "date": "2026-09-01",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 29,
+   "portcalls_container": 4,
+   "portcalls_dry_bulk": 10,
+   "portcalls_tanker": 3,
+   "import": 548154,
+   "export": 32363
+  },
+  {
+   "date": "2026-08-31",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 23,
+   "portcalls_container": 3,
+   "portcalls_dry_bulk": 9,
+   "portcalls_tanker": 6,
+   "import": 355431,
+   "export": 28672
+  },
+  {
+   "date": "2026-08-30",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 28,
+   "portcalls_container": 4,
+   "portcalls_dry_bulk": 14,
+   "portcalls_tanker": 2,
+   "import": 501578,
+   "export": 44326
+  },
+  {
+   "date": "2026-08-29",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 18,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 8,
+   "portcalls_tanker": 4,
+   "import": 446709,
+   "export": 12637
+  },
+  {
+   "date": "2026-08-28",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 8,
+   "portcalls_container": 2,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 3,
+   "import": 80763,
+   "export": 3165
+  },
+  {
+   "date": "2026-08-27",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 2,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 0,
+   "import": 38506,
+   "export": 2603
+  },
+  {
+   "date": "2026-08-26",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 15,
+   "portcalls_container": 6,
+   "portcalls_dry_bulk": 4,
+   "portcalls_tanker": 1,
+   "import": 148091,
+   "export": 20607
+  },
+  {
+   "date": "2026-08-25",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 22,
+   "portcalls_container": 3,
+   "portcalls_dry_bulk": 7,
+   "portcalls_tanker": 3,
+   "import": 277660,
+   "export": 56103
+  },
+  {
+   "date": "2026-08-24",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 29,
+   "portcalls_container": 7,
+   "portcalls_dry_bulk": 11,
+   "portcalls_tanker": 4,
+   "import": 354292,
+   "export": 34433
+  },
+  {
+   "date": "2026-08-23",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 17,
+   "portcalls_container": 3,
+   "portcalls_dry_bulk": 6,
+   "portcalls_tanker": 2,
+   "import": 148081,
+   "export": 23385
+  },
+  {
+   "date": "2026-08-22",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 21,
+   "portcalls_container": 3,
+   "portcalls_dry_bulk": 5,
+   "portcalls_tanker": 5,
+   "import": 253495,
+   "export": 14797
+  },
+  {
+   "date": "2026-08-21",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 14,
+   "portcalls_container": 4,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 4,
+   "import": 41699,
+   "export": 22578
+  },
+  {
+   "date": "2026-08-20",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 25,
+   "portcalls_container": 2,
+   "portcalls_dry_bulk": 10,
+   "portcalls_tanker": 2,
+   "import": 485541,
+   "export": 39400
+  },
+  {
+   "date": "2026-08-19",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 22,
+   "portcalls_container": 8,
+   "portcalls_dry_bulk": 7,
+   "portcalls_tanker": 4,
+   "import": 317427,
+   "export": 22607
+  },
+  {
+   "date": "2026-08-18",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 28,
+   "portcalls_container": 2,
+   "portcalls_dry_bulk": 11,
+   "portcalls_tanker": 6,
+   "import": 515353,
+   "export": 29313
+  },
+  {
+   "date": "2026-08-17",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 29,
+   "portcalls_container": 6,
+   "portcalls_dry_bulk": 10,
+   "portcalls_tanker": 4,
+   "import": 295106,
+   "export": 109942
+  },
+  {
+   "date": "2026-08-16",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 31,
+   "portcalls_container": 4,
+   "portcalls_dry_bulk": 8,
+   "portcalls_tanker": 6,
+   "import": 369199,
+   "export": 80103
+  },
+  {
+   "date": "2026-08-15",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 20,
+   "portcalls_container": 5,
+   "portcalls_dry_bulk": 4,
+   "portcalls_tanker": 7,
+   "import": 336633,
+   "export": 16622
+  },
+  {
+   "date": "2026-08-14",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 31,
+   "portcalls_container": 6,
+   "portcalls_dry_bulk": 8,
+   "portcalls_tanker": 7,
+   "import": 237993,
+   "export": 48543
+  },
+  {
+   "date": "2026-08-13",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 34,
+   "portcalls_container": 7,
+   "portcalls_dry_bulk": 12,
+   "portcalls_tanker": 8,
+   "import": 294105,
+   "export": 42108
+  },
+  {
+   "date": "2026-08-12",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 23,
+   "portcalls_container": 9,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 4,
+   "import": 75206,
+   "export": 53089
+  },
+  {
+   "date": "2026-08-11",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 1,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 541,
+   "export": 0
+  },
+  {
+   "date": "2026-08-10",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 0,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 0
+  },
+  {
+   "date": "2026-08-09",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 0,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 0
+  },
+  {
+   "date": "2026-08-08",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 0,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 0
+  },
+  {
+   "date": "2026-08-07",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 0,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 0
+  },
+  {
+   "date": "2026-08-06",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 2,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 0,
+   "import": 59065,
+   "export": 4902
+  },
+  {
+   "date": "2026-08-05",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 7,
+   "portcalls_container": 4,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 1,
+   "import": 55828,
+   "export": 8551
+  },
+  {
+   "date": "2026-08-04",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 13,
+   "portcalls_container": 2,
+   "portcalls_dry_bulk": 6,
+   "portcalls_tanker": 1,
+   "import": 287314,
+   "export": 12004
+  },
+  {
+   "date": "2026-08-03",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 19,
+   "portcalls_container": 4,
+   "portcalls_dry_bulk": 4,
+   "portcalls_tanker": 3,
+   "import": 88520,
+   "export": 69322
+  },
+  {
+   "date": "2026-08-02",
+   "portname": "Suzhou (Taicang)",
+   "portcalls": 22,
+   "portcalls_container": 4,
+   "portcalls_dry_bulk": 10,
+   "portcalls_tanker": 3,
+   "import": 503691,
+   "export": 22736
+  }
+ ],
+ "port1425": [
+  {
+   "date": "2026-10-30",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 12,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 7,
+   "portcalls_tanker": 3,
+   "import": 174862,
+   "export": 4527
+  },
+  {
+   "date": "2026-10-29",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 11,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 3,
+   "import": 151378,
+   "export": 7583
+  },
+  {
+   "date": "2026-10-28",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 5,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 3,
+   "portcalls_tanker": 1,
+   "import": 27318,
+   "export": 969
+  },
+  {
+   "date": "2026-10-27",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 3,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 2,
+   "import": 25948,
+   "export": 1788
+  },
+  {
+   "date": "2026-10-26",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 3,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 698,
+   "export": 2252
+  },
+  {
+   "date": "2026-10-25",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 1,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 0,
+   "import": 33896,
+   "export": 1431
+  },
+  {
+   "date": "2026-10-24",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 3,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 1,
+   "import": 8780,
+   "export": 13811
+  },
+  {
+   "date": "2026-10-23",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 5,
+   "portcalls_container": 2,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 1,
+   "import": 10896,
+   "export": 1277
+  },
+  {
+   "date": "2026-10-22",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 8,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 2,
+   "import": 177175,
+   "export": 20645
+  },
+  {
+   "date": "2026-10-21",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 2,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 23244
+  },
+  {
+   "date": "2026-10-20",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 6,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 4,
+   "portcalls_tanker": 1,
+   "import": 145102,
+   "export": 4895
+  },
+  {
+   "date": "2026-10-19",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 3,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 2,
+   "import": 18567,
+   "export": 415
+  },
+  {
+   "date": "2026-10-18",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 5,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 2,
+   "import": 26965,
+   "export": 1710
+  },
+  {
+   "date": "2026-10-17",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 4,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 2,
+   "import": 18491,
+   "export": 1081
+  },
+  {
+   "date": "2026-10-16",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 10,
+   "portcalls_container": 2,
+   "portcalls_dry_bulk": 4,
+   "portcalls_tanker": 3,
+   "import": 63976,
+   "export": 6137
+  },
+  {
+   "date": "2026-10-15",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 7,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 4,
+   "import": 115176,
+   "export": 0
+  },
+  {
+   "date": "2026-10-14",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 4,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 1,
+   "import": 16265,
+   "export": 6128
+  },
+  {
+   "date": "2026-10-13",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 8,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 4,
+   "portcalls_tanker": 1,
+   "import": 83661,
+   "export": 1285
+  },
+  {
+   "date": "2026-10-12",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 8,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 3,
+   "import": 135553,
+   "export": 2969
+  },
+  {
+   "date": "2026-10-11",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 7,
+   "portcalls_container": 2,
+   "portcalls_dry_bulk": 3,
+   "portcalls_tanker": 2,
+   "import": 140334,
+   "export": 3521
+  },
+  {
+   "date": "2026-10-10",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 6,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 3,
+   "portcalls_tanker": 1,
+   "import": 189588,
+   "export": 0
+  },
+  {
+   "date": "2026-10-09",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 9,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 5,
+   "portcalls_tanker": 2,
+   "import": 43199,
+   "export": 14204
+  },
+  {
+   "date": "2026-10-08",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 7,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 3,
+   "portcalls_tanker": 3,
+   "import": 57897,
+   "export": 2321
+  },
+  {
+   "date": "2026-10-07",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 4,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 2,
+   "import": 202214,
+   "export": 0
+  },
+  {
+   "date": "2026-10-06",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 5,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 1,
+   "import": 12578,
+   "export": 3886
+  },
+  {
+   "date": "2026-10-05",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 5,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 3,
+   "import": 155101,
+   "export": 0
+  },
+  {
+   "date": "2026-10-04",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 7,
+   "portcalls_container": 2,
+   "portcalls_dry_bulk": 3,
+   "portcalls_tanker": 1,
+   "import": 102574,
+   "export": 6652
+  },
+  {
+   "date": "2026-10-03",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 6,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 3,
+   "import": 22586,
+   "export": 1343
+  },
+  {
+   "date": "2026-10-02",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 7,
+   "portcalls_container": 2,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 2,
+   "import": 114462,
+   "export": 3933
+  },
+  {
+   "date": "2026-10-01",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 9,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 3,
+   "portcalls_tanker": 4,
+   "import": 147269,
+   "export": 4836
+  },
+  {
+   "date": "2026-09-30",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 5,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 1,
+   "import": 38566,
+   "export": 4533
+  },
+  {
+   "date": "2026-09-29",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 7,
+   "portcalls_container": 2,
+   "portcalls_dry_bulk": 3,
+   "portcalls_tanker": 1,
+   "import": 74944,
+   "export": 9456
+  },
+  {
+   "date": "2026-09-28",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 3,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 1,
+   "import": 133506,
+   "export": 0
+  },
+  {
+   "date": "2026-09-27",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 6,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 3,
+   "portcalls_tanker": 1,
+   "import": 62373,
+   "export": 2321
+  },
+  {
+   "date": "2026-09-26",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 4,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 1,
+   "import": 26023,
+   "export": 1424
+  },
+  {
+   "date": "2026-09-25",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 4,
+   "portcalls_container": 2,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 0,
+   "import": 118353,
+   "export": 2042
+  },
+  {
+   "date": "2026-09-24",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 5,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 4,
+   "import": 72901,
+   "export": 1081
+  },
+  {
+   "date": "2026-09-23",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 6,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 4,
+   "portcalls_tanker": 2,
+   "import": 58096,
+   "export": 46169
+  },
+  {
+   "date": "2026-09-22",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 9,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 4,
+   "portcalls_tanker": 2,
+   "import": 168923,
+   "export": 4094
+  },
+  {
+   "date": "2026-09-21",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 3,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 1,
+   "import": 15401,
+   "export": 1343
+  },
+  {
+   "date": "2026-09-20",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 7,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 3,
+   "portcalls_tanker": 3,
+   "import": 64791,
+   "export": 7332
+  },
+  {
+   "date": "2026-09-19",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 9,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 4,
+   "import": 150981,
+   "export": 4839
+  },
+  {
+   "date": "2026-09-18",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 4,
+   "portcalls_container": 2,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 2,
+   "import": 7364,
+   "export": 3506
+  },
+  {
+   "date": "2026-09-17",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 9,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 3,
+   "portcalls_tanker": 3,
+   "import": 94170,
+   "export": 4317
+  },
+  {
+   "date": "2026-09-16",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 10,
+   "portcalls_container": 2,
+   "portcalls_dry_bulk": 4,
+   "portcalls_tanker": 2,
+   "import": 114643,
+   "export": 65005
+  },
+  {
+   "date": "2026-09-15",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 7,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 5,
+   "portcalls_tanker": 1,
+   "import": 94260,
+   "export": 38074
+  },
+  {
+   "date": "2026-09-14",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 6,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 3,
+   "portcalls_tanker": 2,
+   "import": 100792,
+   "export": 10305
+  },
+  {
+   "date": "2026-09-13",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 8,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 3,
+   "portcalls_tanker": 4,
+   "import": 94216,
+   "export": 8569
+  },
+  {
+   "date": "2026-09-12",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 5,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 3,
+   "portcalls_tanker": 1,
+   "import": 79779,
+   "export": 2785
+  },
+  {
+   "date": "2026-09-11",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 10,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 5,
+   "portcalls_tanker": 3,
+   "import": 236912,
+   "export": 10351
+  },
+  {
+   "date": "2026-09-10",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 3,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 1,
+   "import": 17325,
+   "export": 0
+  },
+  {
+   "date": "2026-09-09",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 6,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 2,
+   "import": 153713,
+   "export": 1711
+  },
+  {
+   "date": "2026-09-08",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 6,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 3,
+   "portcalls_tanker": 1,
+   "import": 47584,
+   "export": 1645
+  },
+  {
+   "date": "2026-09-07",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 9,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 6,
+   "portcalls_tanker": 2,
+   "import": 284469,
+   "export": 20024
+  },
+  {
+   "date": "2026-09-06",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 4,
+   "portcalls_container": 2,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 1,
+   "import": 9039,
+   "export": 1081
+  },
+  {
+   "date": "2026-09-05",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 4,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 3,
+   "import": 0,
+   "export": 17605
+  },
+  {
+   "date": "2026-09-04",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 7,
+   "portcalls_container": 2,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 2,
+   "import": 40871,
+   "export": 13386
+  },
+  {
+   "date": "2026-09-03",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 12,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 4,
+   "portcalls_tanker": 4,
+   "import": 242072,
+   "export": 4898
+  },
+  {
+   "date": "2026-09-02",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 5,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 2,
+   "import": 62196,
+   "export": 0
+  },
+  {
+   "date": "2026-09-01",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 10,
+   "portcalls_container": 2,
+   "portcalls_dry_bulk": 4,
+   "portcalls_tanker": 2,
+   "import": 121961,
+   "export": 3793
+  },
+  {
+   "date": "2026-08-31",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 4,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 3,
+   "portcalls_tanker": 1,
+   "import": 108202,
+   "export": 0
+  },
+  {
+   "date": "2026-08-30",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 4,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 1,
+   "import": 81844,
+   "export": 1081
+  },
+  {
+   "date": "2026-08-29",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 3,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 3668
+  },
+  {
+   "date": "2026-08-28",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 2,
+   "portcalls_container": 2,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 5637,
+   "export": 1086
+  },
+  {
+   "date": "2026-08-27",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 3,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 2,
+   "import": 18722,
+   "export": 0
+  },
+  {
+   "date": "2026-08-26",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 9,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 6,
+   "portcalls_tanker": 2,
+   "import": 254215,
+   "export": 3551
+  },
+  {
+   "date": "2026-08-25",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 6,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 2,
+   "import": 70346,
+   "export": 735
+  },
+  {
+   "date": "2026-08-24",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 12,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 6,
+   "portcalls_tanker": 2,
+   "import": 186012,
+   "export": 23015
+  },
+  {
+   "date": "2026-08-23",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 2,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 1,
+   "import": 8353,
+   "export": 1343
+  },
+  {
+   "date": "2026-08-22",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 8,
+   "portcalls_container": 2,
+   "portcalls_dry_bulk": 3,
+   "portcalls_tanker": 3,
+   "import": 136270,
+   "export": 7322
+  },
+  {
+   "date": "2026-08-21",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 7,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 4,
+   "portcalls_tanker": 1,
+   "import": 227611,
+   "export": 3710
+  },
+  {
+   "date": "2026-08-20",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 7,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 2,
+   "import": 141840,
+   "export": 9371
+  },
+  {
+   "date": "2026-08-19",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 8,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 3,
+   "portcalls_tanker": 1,
+   "import": 112498,
+   "export": 19964
+  },
+  {
+   "date": "2026-08-18",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 5,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 3,
+   "portcalls_tanker": 1,
+   "import": 105893,
+   "export": 1343
+  },
+  {
+   "date": "2026-08-17",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 7,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 4,
+   "import": 41701,
+   "export": 3529
+  },
+  {
+   "date": "2026-08-16",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 10,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 4,
+   "portcalls_tanker": 4,
+   "import": 178725,
+   "export": 197
+  },
+  {
+   "date": "2026-08-15",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 7,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 3,
+   "import": 189243,
+   "export": 1081
+  },
+  {
+   "date": "2026-08-14",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 9,
+   "portcalls_container": 2,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 6,
+   "import": 90228,
+   "export": 3697
+  },
+  {
+   "date": "2026-08-13",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 7,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 3,
+   "import": 17738,
+   "export": 19485
+  },
+  {
+   "date": "2026-08-12",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 0,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 0
+  },
+  {
+   "date": "2026-08-11",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 3,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 3,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 14730
+  },
+  {
+   "date": "2026-08-10",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 1,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 5637,
+   "export": 0
+  },
+  {
+   "date": "2026-08-09",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 0,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 0
+  },
+  {
+   "date": "2026-08-08",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 0,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 0
+  },
+  {
+   "date": "2026-08-07",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 1,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 0
+  },
+  {
+   "date": "2026-08-06",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 2,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 1,
+   "import": 67158,
+   "export": 1343
+  },
+  {
+   "date": "2026-08-05",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 9,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 5,
+   "portcalls_tanker": 1,
+   "import": 127532,
+   "export": 2976
+  },
+  {
+   "date": "2026-08-04",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 8,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 3,
+   "import": 96416,
+   "export": 7038
+  },
+  {
+   "date": "2026-08-03",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 7,
+   "portcalls_container": 2,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 2,
+   "import": 74166,
+   "export": 2082
+  },
+  {
+   "date": "2026-08-02",
+   "portname": "Suzhou (Zhangjiagang)",
+   "portcalls": 8,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 3,
+   "portcalls_tanker": 3,
+   "import": 254693,
+   "export": 8780
+  }
+ ],
+ "port227": [
+  {
+   "date": "2026-10-30",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 2,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 1,
+   "import": 283,
+   "export": 0
+  },
+  {
+   "date": "2026-10-29",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 2,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 16186,
+   "export": 974
+  },
+  {
+   "date": "2026-10-28",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 0,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 0
+  },
+  {
+   "date": "2026-10-27",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 3,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 0,
+   "import": 49799,
+   "export": 4490
+  },
+  {
+   "date": "2026-10-26",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 1,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 2251,
+   "export": 0
+  },
+  {
+   "date": "2026-10-25",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 0,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 0
+  },
+  {
+   "date": "2026-10-24",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 0,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 0
+  },
+  {
+   "date": "2026-10-23",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 3,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 0,
+   "import": 5031,
+   "export": 66487
+  },
+  {
+   "date": "2026-10-22",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 3,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 0,
+   "import": 24073,
+   "export": 1481
+  },
+  {
+   "date": "2026-10-21",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 0,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 0
+  },
+  {
+   "date": "2026-10-20",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 2,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 0,
+   "import": 914,
+   "export": 0
+  },
+  {
+   "date": "2026-10-19",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 0,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 0
+  },
+  {
+   "date": "2026-10-18",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 2,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 0,
+   "import": 55711,
+   "export": 0
+  },
+  {
+   "date": "2026-10-17",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 1,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 4074
+  },
+  {
+   "date": "2026-10-16",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 2,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 78591
+  },
+  {
+   "date": "2026-10-15",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 2,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 0,
+   "import": 11580,
+   "export": 0
+  },
+  {
+   "date": "2026-10-14",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 1,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 869,
+   "export": 0
+  },
+  {
+   "date": "2026-10-13",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 2,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 3239
+  },
+  {
+   "date": "2026-10-12",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 4,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 0,
+   "import": 582,
+   "export": 40255
+  },
+  {
+   "date": "2026-10-11",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 1,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 0,
+   "import": 8112,
+   "export": 0
+  },
+  {
+   "date": "2026-10-10",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 2,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 0,
+   "import": 17535,
+   "export": 14883
+  },
+  {
+   "date": "2026-10-09",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 2,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 0,
+   "import": 16726,
+   "export": 7426
+  },
+  {
+   "date": "2026-10-08",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 3,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 0,
+   "import": 7495,
+   "export": 47450
+  },
+  {
+   "date": "2026-10-07",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 1,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 6508,
+   "export": 744
+  },
+  {
+   "date": "2026-10-06",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 3,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 0,
+   "import": 25251,
+   "export": 3380
+  },
+  {
+   "date": "2026-10-05",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 2,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 48687
+  },
+  {
+   "date": "2026-10-04",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 1,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 0
+  },
+  {
+   "date": "2026-10-03",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 1,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 9631,
+   "export": 0
+  },
+  {
+   "date": "2026-10-02",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 3,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 0,
+   "import": 23327,
+   "export": 10400
+  },
+  {
+   "date": "2026-10-01",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 2,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 0,
+   "import": 4772,
+   "export": 554
+  },
+  {
+   "date": "2026-09-30",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 2,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 1445,
+   "export": 2130
+  },
+  {
+   "date": "2026-09-29",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 2,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 24085,
+   "export": 1064
+  },
+  {
+   "date": "2026-09-28",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 2,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 0,
+   "import": 54124,
+   "export": 5779
+  },
+  {
+   "date": "2026-09-27",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 2,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 10062,
+   "export": 2129
+  },
+  {
+   "date": "2026-09-26",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 0,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 0
+  },
+  {
+   "date": "2026-09-25",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 0,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 0
+  },
+  {
+   "date": "2026-09-24",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 2,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 0,
+   "import": 35309,
+   "export": 5779
+  },
+  {
+   "date": "2026-09-23",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 2,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 0,
+   "import": 14338,
+   "export": 10619
+  },
+  {
+   "date": "2026-09-22",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 1,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 8261,
+   "export": 0
+  },
+  {
+   "date": "2026-09-21",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 4,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 3,
+   "portcalls_tanker": 0,
+   "import": 39136,
+   "export": 7261
+  },
+  {
+   "date": "2026-09-20",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 1,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 491
+  },
+  {
+   "date": "2026-09-19",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 2,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 0,
+   "import": 20057,
+   "export": 5779
+  },
+  {
+   "date": "2026-09-18",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 2,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 0,
+   "import": 16726,
+   "export": 5779
+  },
+  {
+   "date": "2026-09-17",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 1,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 5031,
+   "export": 1064
+  },
+  {
+   "date": "2026-09-16",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 3,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 0,
+   "import": 36096,
+   "export": 8325
+  },
+  {
+   "date": "2026-09-15",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 1,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 5031,
+   "export": 1064
+  },
+  {
+   "date": "2026-09-14",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 0,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 0
+  },
+  {
+   "date": "2026-09-13",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 1,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 1158,
+   "export": 0
+  },
+  {
+   "date": "2026-09-12",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 1,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 2209,
+   "export": 0
+  },
+  {
+   "date": "2026-09-11",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 3,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 0,
+   "import": 22483,
+   "export": 2546
+  },
+  {
+   "date": "2026-09-10",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 2,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 105536
+  },
+  {
+   "date": "2026-09-09",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 2,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 0,
+   "import": 2888,
+   "export": 0
+  },
+  {
+   "date": "2026-09-08",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 3,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 0,
+   "import": 44995,
+   "export": 1064
+  },
+  {
+   "date": "2026-09-07",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 1,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 0,
+   "import": 16726,
+   "export": 5779
+  },
+  {
+   "date": "2026-09-06",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 1,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 0,
+   "import": 16726,
+   "export": 5779
+  },
+  {
+   "date": "2026-09-05",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 1,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 0,
+   "import": 16726,
+   "export": 5779
+  },
+  {
+   "date": "2026-09-04",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 2,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 0,
+   "import": 30343,
+   "export": 1481
+  },
+  {
+   "date": "2026-09-03",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 3,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 0,
+   "import": 28266,
+   "export": 7588
+  },
+  {
+   "date": "2026-09-02",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 2,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 0,
+   "import": 2237,
+   "export": 47503
+  },
+  {
+   "date": "2026-09-01",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 3,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 0,
+   "import": 28266,
+   "export": 7588
+  },
+  {
+   "date": "2026-08-31",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 1,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 5031,
+   "export": 1064
+  },
+  {
+   "date": "2026-08-30",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 2,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 0,
+   "import": 33452,
+   "export": 11559
+  },
+  {
+   "date": "2026-08-29",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 3,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 15094,
+   "export": 3194
+  },
+  {
+   "date": "2026-08-28",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 0,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 0
+  },
+  {
+   "date": "2026-08-27",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 0,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 0
+  },
+  {
+   "date": "2026-08-26",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 2,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 0,
+   "import": 33452,
+   "export": 11559
+  },
+  {
+   "date": "2026-08-25",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 3,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 15213,
+   "export": 2129
+  },
+  {
+   "date": "2026-08-24",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 1,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 8612,
+   "export": 0
+  },
+  {
+   "date": "2026-08-23",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 1,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 0,
+   "import": 16726,
+   "export": 5779
+  },
+  {
+   "date": "2026-08-22",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 2,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 0,
+   "import": 31064,
+   "export": 7261
+  },
+  {
+   "date": "2026-08-21",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 3,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 0,
+   "import": 69144,
+   "export": 1064
+  },
+  {
+   "date": "2026-08-20",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 0,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 0
+  },
+  {
+   "date": "2026-08-19",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 4,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 0,
+   "import": 33297,
+   "export": 8653
+  },
+  {
+   "date": "2026-08-18",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 1,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 0
+  },
+  {
+   "date": "2026-08-17",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 5,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 0,
+   "import": 31712,
+   "export": 8256
+  },
+  {
+   "date": "2026-08-16",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 2,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 0,
+   "import": 60835,
+   "export": 0
+  },
+  {
+   "date": "2026-08-15",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 2,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 0,
+   "import": 16726,
+   "export": 5779
+  },
+  {
+   "date": "2026-08-14",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 1,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 0,
+   "import": 16726,
+   "export": 5779
+  },
+  {
+   "date": "2026-08-13",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 5,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 2,
+   "portcalls_tanker": 0,
+   "import": 14965,
+   "export": 55026
+  },
+  {
+   "date": "2026-08-12",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 1,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 4938,
+   "export": 0
+  },
+  {
+   "date": "2026-08-11",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 0,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 0
+  },
+  {
+   "date": "2026-08-10",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 0,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 0
+  },
+  {
+   "date": "2026-08-09",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 0,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 0
+  },
+  {
+   "date": "2026-08-08",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 0,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 0
+  },
+  {
+   "date": "2026-08-07",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 0,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 0
+  },
+  {
+   "date": "2026-08-06",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 0,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 0
+  },
+  {
+   "date": "2026-08-05",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 1,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 5031,
+   "export": 1064
+  },
+  {
+   "date": "2026-08-04",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 0,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 0,
+   "export": 0
+  },
+  {
+   "date": "2026-08-03",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 1,
+   "portcalls_container": 0,
+   "portcalls_dry_bulk": 1,
+   "portcalls_tanker": 0,
+   "import": 16726,
+   "export": 5779
+  },
+  {
+   "date": "2026-08-02",
+   "portname": "Suzhou (Changshu)",
+   "portcalls": 1,
+   "portcalls_container": 1,
+   "portcalls_dry_bulk": 0,
+   "portcalls_tanker": 0,
+   "import": 1017,
+   "export": 0
+  }
+ ]
+}
